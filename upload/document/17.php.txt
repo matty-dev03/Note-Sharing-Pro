@@ -1,0 +1,32 @@
+<?php
+$mark=array(
+array("C PROGGRAMMING"=>"50","C++"=>"89","JAVA"=>"67","PHP"=>"90","LINUX"=>"80"),
+array("C PROGGRAMMING"=>"40","C++"=>"9","JAVA"=>"57","PHP"=>"90","LINUX"=>"78"),
+array("C PROGGRAMMING"=>"50","C++"=>"89","JAVA"=>"77","PHP"=>"80","LINUX"=>"90")
+);
+for($i=0;$i<3;$i++)
+{
+$total=0;
+echo "<br> <br> PROGRESS REPORT OF STUDENT $i <br>";
+foreach($mark[$i] as $k=>$v)
+{
+echo"<b>SUBJECT:$k</b><br> <b>MARKS:$v</b><br>";
+$total=$total+$v;
+}
+echo"<br> <h4> TOTAL MARKS = $total </h4> ";
+$per=$total/5;
+if($per>=80)
+echo"<br> GRADE A" ;
+else if($per>=70)
+echo "<br> GRADE B";
+else if($per>=60)
+
+echo "<br> GRADE C";
+else if($per>=50)
+echo "<br> GRADE D";
+else if($per>=40)
+echo "<br> GRADE E";
+else 
+echo "FAILED";
+}
+?>
